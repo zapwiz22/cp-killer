@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+TEMPLATE="$HOME/scripts/cp-killer"
+
+echo "Installing CP Killer files..."
+
+cp "$TEMPLATE"/* .
+
+g++ server.cpp -o server || exit 1
+g++ judge.cpp -o judge || exit 1
+
+chmod +x addtest
+chmod +x stress
+
+echo "CP Killer ready in $(pwd)"

@@ -44,7 +44,7 @@ cp -r . $HOME/scripts/cp-killer
 ### Step 2: Build the VS Code Extension
 
 ```bash
-# From the cp-killer directory
+# Navigate to the extension directory from cp-killer
 cd zapwiz22-cp-killer
 npm install
 npm run package

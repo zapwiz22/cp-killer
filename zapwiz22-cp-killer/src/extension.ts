@@ -11,11 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     terminal.show();
 
-    terminal.sendText("pkill server || true");
-    terminal.sendText("./server &");
-    terminal.sendText("sleep 1");
     terminal.sendText("./judge");
-    terminal.sendText("pkill server || true");
   });
 
   context.subscriptions.push(run);

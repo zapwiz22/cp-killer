@@ -18,7 +18,7 @@ CP Killer is a streamlined competitive programming testing environment that comb
 - ✅ **Colored Output**: Green for AC, Red for WA, Yellow for TLE
 - 🧪 **Manual Test Addition**: Easily add custom test cases via `addtest` script
 - 🔄 **Stress Testing**: Compare against brute-force with automated random testing
-- ⏱️ **Time Limit Detection**: 5-second TLE detection for hung programs
+- ⏱️ **Time Limit Detection**: 5-second TLE detection for hung programs (hardcoded in judge)
 
 ## Prerequisites
 
@@ -44,6 +44,7 @@ cp -r . $HOME/scripts/cp-killer
 ### Step 2: Build the VS Code Extension
 
 ```bash
+# From the cp-killer directory
 cd zapwiz22-cp-killer
 npm install
 npm run package
@@ -64,7 +65,18 @@ For each problem you want to solve:
 # Navigate to your problem directory
 cd /path/to/your/problem/folder
 
-# Run the setup script
+# Run the setup script (use full path or add to PATH)
+$HOME/scripts/cp-killer/cpsetup
+```
+
+**Optional**: Add to your shell's PATH for easier access:
+```bash
+# Add to ~/.bashrc or ~/.zshrc
+export PATH="$PATH:$HOME/scripts/cp-killer"
+```
+
+After adding to PATH, you can simply run:
+```bash
 cpsetup
 ```
 
